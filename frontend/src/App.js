@@ -4,6 +4,7 @@ import AddNewMovie from './components/AddNewMovie';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Movie from './components/Movie/Movies';
+import SearchContextProvider from './context/searchContext';
 
 const client = new ApolloClient({
    uri: 'http://localhost:4000/graphql',
@@ -14,9 +15,13 @@ function App() {
    return (
       <div className="App">
          <ApolloProvider client={client}>
-            <Header />
-            <Movie />
+            <SearchContextProvider>
+               <Header />
+               <Movie />
+            </SearchContextProvider>
+
             <AddNewMovie />
+
             <Footer />
          </ApolloProvider>
       </div>
