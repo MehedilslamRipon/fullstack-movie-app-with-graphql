@@ -25,7 +25,7 @@ const Movie = (props) => {
                      <h4>
                         <b>{movie.name} </b>
                      </h4>
-                     <h4>Movie Type: {movie.type}</h4>
+                     <h5>Movie Type: {movie.type}</h5>
                      <h5> Release: {movie.year} </h5>
                   </div>
                </div>
